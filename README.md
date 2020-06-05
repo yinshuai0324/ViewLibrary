@@ -6,7 +6,8 @@
 #### 引入项目
 ```
 dependencies {
-
+ //引入依赖库
+ implementation 'com.github.yinshuai0324:ViewLibrary:Tag'
 }
 ```
 
