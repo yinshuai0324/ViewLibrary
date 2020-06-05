@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.yinshuai.library.view.img.NetImageView
+        android:id="@+id/netImage"
+        android:layout_width="@dimen/dp200"
+        android:layout_height="@dimen/dp200" />
+
+    <com.yinshuai.library.view.img.RoundNetworkImageView
+        android:id="@+id/roundNetImage"
+        android:layout_width="@dimen/dp200"
+        android:layout_height="@dimen/dp200"
+        android:layout_marginTop="@dimen/dp10"
+        app:borderWidth="@dimen/dp10"
+        app:borderColor="@color/colorAccent"
+        app:cornerType="0x0f"
+        app:radius="@dimen/dp100" />
+
+</LinearLayout>

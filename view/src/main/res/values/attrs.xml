@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--公共属性-->
+    <attr name="round_circle" format="boolean" />
+    <attr name="round_corner" format="integer|dimension" />
+    <attr name="round_corner_top_left" format="integer|dimension" />
+    <attr name="round_corner_top_right" format="integer|dimension" />
+    <attr name="round_corner_bottom_left" format="integer|dimension" />
+    <attr name="round_corner_bottom_right" format="integer|dimension" />
+    <attr name="stroke_color" format="color" />
+    <attr name="stroke_width" format="integer|dimension" />
+    <attr name="clip_background" format="boolean" />
+
+    <!--NetImageView 公共属性-->
+    <attr name="roundCircle" format="boolean" />
+    <attr name="roundRadius" format="integer|dimension" />
+    <attr name="roundRadiusTopLeft" format="integer|dimension" />
+    <attr name="roundRadiusTopRight" format="integer|dimension" />
+    <attr name="roundRadiusBottomRight" format="integer|dimension" />
+    <attr name="roundRadiusBottomLeft" format="integer|dimension" />
+    <attr name="strokeColor" format="color" />
+    <attr name="strokeWidth" format="integer|dimension" />
+    <attr name="roundBackground" format="boolean" />
+    <attr name="startColor" format="color" />
+    <attr name="endColor" format="color" />
+    <attr name="radius" format="dimension" />
+
+
+    <declare-styleable name="ShadowLayout">
+        <attr name="shadowName" format="string" />
+        <attr name="shadowPadding" format="dimension" />
+        <attr name="shadowColor" format="color" />
+    </declare-styleable>
+
+
+    <declare-styleable name="SquareLayout">
+        <attr name="widthToHeight" format="float" />
+        <attr name="heightToWidth" format="float" />
+        <attr name="percentW" format="float" />
+        <attr name="percentH" format="float" />
+        <attr name="maxW" format="dimension" />
+        <attr name="maxH" format="dimension" />
+    </declare-styleable>
+
+
+    <declare-styleable name="RoundWaveLayout">
+        <attr name="borderColor" format="color" />
+        <attr name="borderWidth" format="dimension" />
+        <attr name="radius" />
+        <attr name="cornerType" format="integer" />
+        <attr name="bodyColor" format="color" />
+        <attr name="roundPadding" format="dimension" />
+
+        <attr name="waveSize" format="dimension" />
+        <attr name="waveOffsetY" format="dimension" />
+        <attr name="waveSpace" format="dimension" />
+        <attr name="waveType" format="integer" />
+        <attr name="cutCornerType" format="integer" />
+        <attr name="cutCornerSize" format="dimension" />
+        <attr name="cutCornerOffsetX" format="dimension" />
+        <attr name="cutCornerOffsetY" format="dimension" />
+
+        <attr name="needSaveLayer" format="boolean" />
+        <attr name="needCenterCircle" format="boolean" />
+        <attr name="centerCircleSize" format="dimension" />
+
+        <attr name="isOpenGradient" format="boolean" />
+        <attr name="startColor" />
+        <attr name="endColor" />
+    </declare-styleable>
+
+
+    <declare-styleable name="RoundNetworkImageView">
+        <attr name="borderColor" />
+        <attr name="bodyColor" />
+        <attr name="borderWidth" />
+        <attr name="roundPadding" />
+        <attr name="radius" />
+        <attr name="cornerType" />
+    </declare-styleable>
+
+    <declare-styleable name="SquareImageView">
+        <attr name="flowVeritcal" format="boolean" />
+        <attr name="reMeasure" format="boolean" />
+        <attr name="widthToHeight" />
+        <attr name="heightToWidth" />
+        <attr name="percentW" />
+        <attr name="percentH" />
+        <attr name="maxW" />
+        <attr name="maxH" />
+    </declare-styleable>
+
+
+    <declare-styleable name="NetImageView">
+        <attr name="errorRes" format="reference" />
+        <attr name="loadingRes" format="reference" />
+        <attr name="defaultRes" format="reference" />
+        <attr name="url" format="string" />
+    </declare-styleable>
+
+
+    <declare-styleable name="SelectBtn">
+        <attr name="isSelectB" format="boolean" />
+        <attr name="selectImg" format="reference" />
+        <attr name="noSelectImg" format="reference" />
+        <attr name="cantSelectImg" format="reference" />
+        <attr name="selectColor" format="color" />
+        <attr name="noSelectColor" format="color" />
+        <attr name="playAnimator" format="boolean" />
+    </declare-styleable>
+</resources>
