@@ -7,7 +7,7 @@
 ```
 dependencies {
  //引入依赖库
- implementation 'com.github.yinshuai0324:ViewLibrary:Tag'
+ implementation 'com.github.yinshuai0324:ViewLibrary:v1.0.1'
 }
 ```
 
