@@ -109,4 +109,11 @@
         <attr name="noSelectColor" format="color" />
         <attr name="playAnimator" format="boolean" />
     </declare-styleable>
+
+
+    <declare-styleable name="HeaderView">
+        <attr name="title" />
+        <attr name="lineColor" format="color" />
+        <attr name="isShowLine" format="boolean" />
+    </declare-styleable>
 </resources>
