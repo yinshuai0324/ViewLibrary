@@ -5,6 +5,14 @@
 
 #### 引入项目
 ```
+//项目根目录下的build.gradle
+allprojects {
+    repositories {
+        maven { url "https://jitpack.io" }
+    }
+}
+
+//app下的build.gradle
 dependencies {
  //引入依赖库
  implementation 'com.github.yinshuai0324:ViewLibrary:v1.0.1'
