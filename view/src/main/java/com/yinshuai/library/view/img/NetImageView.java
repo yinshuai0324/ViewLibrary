@@ -6,6 +6,7 @@ import android.text.TextUtils;
 import android.util.AttributeSet;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.yinshuai.library.view.R;
 
 
@@ -40,7 +41,7 @@ public class NetImageView extends SquareImageView {
             setImageResource(defaultResId);
         } else {
             imageUrl = url;
-            Glide.with(this).load(imageUrl).error(errorResId).placeholder(loadingResId).into(this);
+            Glide.with(this).load(imageUrl).error(errorResId).placeholder(loadingResId).transition(DrawableTransitionOptions.withCrossFade()).into(this);
         }
     }
 
