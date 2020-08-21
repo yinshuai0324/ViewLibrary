@@ -23,8 +23,8 @@ public class NetImageActivity extends AppCompatActivity {
         netImage = findViewById(R.id.netImage);
         roundNetImage = findViewById(R.id.roundNetImage);
 
-        netImage.setUrl("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1598039976631&di=4f78e558157d270bc267994e54d964f0&imgtype=0&src=http%3A%2F%2Fphoto.meifajie.com%2Fpictures%2F2015-06%2F61_1435126528.jpg");
-        roundNetImage.setUrl("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1598039976631&di=4f78e558157d270bc267994e54d964f0&imgtype=0&src=http%3A%2F%2Fphoto.meifajie.com%2Fpictures%2F2015-06%2F61_1435126528.jpg");
+        netImage.setUrl("https://timgsa.baidu.com/?&quality=80&size=b9999_10000&sec=1598039976631&di=4f78e558157d270bc267994e54d964f0&imgtype=0&src=http%3A%2F%2Fphoto.meifajie.com%2Fpictures%2F2015-06%2F61_1435126528.jpg");
+        roundNetImage.setUrl("https://timgsa.baidu./timg?image&quality=80&size=b9999_10000&sec=1598039976631&di=4f78e558157d270bc267994e54d964f0&imgtype=0&src=http%3A%2F%2Fphoto.meifajie.com%2Fpictures%2F2015-06%2F61_1435126528.jpg");
     }
 
 }

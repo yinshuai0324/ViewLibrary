@@ -28,8 +28,8 @@ public class NetImageView extends SquareImageView {
     public NetImageView(Context context, AttributeSet attrs) {
         super(context, attrs);
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.NetImageView);
-        errorResId = a.getResourceId(R.styleable.NetImageView_errorRes, R.drawable.ic_loading_error);
-        loadingResId = a.getResourceId(R.styleable.NetImageView_loadingRes, R.drawable.ic_loading);
+        errorResId = a.getResourceId(R.styleable.NetImageView_errorRes, R.drawable.ic_default);
+        loadingResId = a.getResourceId(R.styleable.NetImageView_loadingRes, R.drawable.ic_default);
         defaultResId = a.getResourceId(R.styleable.NetImageView_defaultRes, R.drawable.ic_default);
         setDefaultSrc(defaultResId);
         setUrl(a.getString(R.styleable.NetImageView_url));

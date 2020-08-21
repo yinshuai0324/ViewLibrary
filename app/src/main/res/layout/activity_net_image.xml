@@ -10,6 +10,7 @@
     <com.yinshuai.library.view.img.NetImageView
         android:id="@+id/netImage"
         android:layout_width="@dimen/dp200"
+        android:scaleType="centerCrop"
         android:layout_height="@dimen/dp200" />
 
     <com.yinshuai.library.view.img.RoundNetworkImageView
@@ -18,6 +19,7 @@
         android:layout_height="@dimen/dp200"
         android:layout_marginTop="@dimen/dp10"
         app:borderWidth="@dimen/dp10"
+        android:scaleType="centerCrop"
         app:borderColor="@color/colorAccent"
         app:cornerType="0x0f"
         app:radius="@dimen/dp100" />
