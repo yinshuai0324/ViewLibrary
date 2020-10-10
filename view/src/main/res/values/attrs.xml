@@ -11,6 +11,13 @@
     <attr name="stroke_color" format="color" />
     <attr name="stroke_width" format="integer|dimension" />
     <attr name="clip_background" format="boolean" />
+    <attr name="border_width" format="dimension" />
+    <attr name="border_color" format="color" />
+    <attr name="backgroundColor" format="color" />
+    <attr name="radiusTopLeft" format="dimension" />
+    <attr name="radiusTopRight" format="dimension" />
+    <attr name="radiusBottomLeft" format="dimension" />
+    <attr name="radiusBottomRight" format="dimension" />
 
     <!--NetImageView 公共属性-->
     <attr name="roundCircle" format="boolean" />
@@ -116,4 +123,6 @@
         <attr name="lineColor" format="color" />
         <attr name="isShowLine" format="boolean" />
     </declare-styleable>
+
+
 </resources>

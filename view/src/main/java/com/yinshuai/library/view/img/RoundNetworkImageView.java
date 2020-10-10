@@ -10,6 +10,8 @@ import android.graphics.PorterDuffXfermode;
 import android.graphics.RectF;
 import android.util.AttributeSet;
 
+import androidx.core.content.ContextCompat;
+
 import com.yinshuai.library.view.R;
 
 
@@ -117,22 +119,22 @@ public class RoundNetworkImageView extends NetImageView {
 
             roundpath = new Path();
 
-//            roundpath.arcTo(new RectF(-borderPadd, -borderPadd, corners[0] * 2, corners[1] * 2), 180, 90);
+            roundpath.arcTo(new RectF(-borderPadd, -borderPadd, corners[0] * 2, corners[1] * 2), 180, 90);
+
+            roundpath.arcTo(new RectF(pathW - corners[2] * 2, -borderPadd, pathW + borderPadd, corners[3] * 2), -90, 90);
+
+            roundpath.arcTo(new RectF(pathW - corners[4] * 2, pathH - corners[5] * 2, pathW + borderPadd, pathH + borderPadd), 0, 90);
+
+            roundpath.arcTo(new RectF(-borderPadd, pathH - corners[7] * 2, corners[6] * 2, pathH + borderPadd), 90, 90);
+
+
+//            roundpath.arcTo(new RectF(-borderPadd - 1, -borderPadd - 1, corners[0] * 2, corners[1] * 2), 180, 90);
 //
-//            roundpath.arcTo(new RectF(pathW - corners[2] * 2, -borderPadd, pathW + borderPadd, corners[3] * 2), -90, 90);
+//            roundpath.arcTo(new RectF(pathW - corners[2] * 2, -borderPadd - 1, pathW + borderPadd + 1, corners[3] * 2), -90, 90);
 //
-//            roundpath.arcTo(new RectF(pathW - corners[4] * 2, pathH - corners[5] * 2, pathW + borderPadd, pathH + borderPadd), 0, 90);
+//            roundpath.arcTo(new RectF(pathW - corners[4] * 2, pathH - corners[5] * 2, pathW + borderPadd + 1, pathH + borderPadd + 1), 0, 90);
 //
-//            roundpath.arcTo(new RectF(-borderPadd, pathH - corners[7] * 2, corners[6] * 2, pathH + borderPadd), 90, 90);
-
-
-            roundpath.arcTo(new RectF(-borderPadd - 1, -borderPadd - 1, corners[0] * 2, corners[1] * 2), 180, 90);
-
-            roundpath.arcTo(new RectF(pathW - corners[2] * 2, -borderPadd - 1, pathW + borderPadd + 1, corners[3] * 2), -90, 90);
-
-            roundpath.arcTo(new RectF(pathW - corners[4] * 2, pathH - corners[5] * 2, pathW + borderPadd + 1, pathH + borderPadd + 1), 0, 90);
-
-            roundpath.arcTo(new RectF(-borderPadd - 1, pathH - corners[7] * 2 + 1, corners[6] * 2, pathH + borderPadd + 1), 90, 90);
+//            roundpath.arcTo(new RectF(-borderPadd - 1, pathH - corners[7] * 2 + 1, corners[6] * 2, pathH + borderPadd + 1), 90, 90);
 
             roundpath.close();
 

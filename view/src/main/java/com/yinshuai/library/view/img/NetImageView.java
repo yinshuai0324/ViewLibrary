@@ -2,8 +2,10 @@ package com.yinshuai.library.view.img;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.drawable.Drawable;
 import android.text.TextUtils;
 import android.util.AttributeSet;
+import android.util.Log;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
@@ -41,7 +43,7 @@ public class NetImageView extends SquareImageView {
             setImageResource(defaultResId);
         } else {
             imageUrl = url;
-            Glide.with(this).load(imageUrl).error(errorResId).placeholder(loadingResId).transition(DrawableTransitionOptions.withCrossFade()).into(this);
+            Glide.with(this).load(imageUrl).error(errorResId).placeholder(defaultResId).transition(DrawableTransitionOptions.withCrossFade()).into(this);
         }
     }
 

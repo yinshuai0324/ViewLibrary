@@ -4,23 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/color_FFFFFF"
     android:gravity="center"
     android:orientation="vertical">
 
     <com.yinshuai.library.view.img.NetImageView
         android:id="@+id/netImage"
         android:layout_width="@dimen/dp200"
-        android:scaleType="centerCrop"
-        android:layout_height="@dimen/dp200" />
+        android:layout_height="@dimen/dp200"
+        android:scaleType="centerCrop" />
 
     <com.yinshuai.library.view.img.RoundNetworkImageView
         android:id="@+id/roundNetImage"
         android:layout_width="@dimen/dp200"
         android:layout_height="@dimen/dp200"
         android:layout_marginTop="@dimen/dp10"
-        app:borderWidth="@dimen/dp10"
         android:scaleType="centerCrop"
         app:borderColor="@color/colorAccent"
+        app:borderWidth="@dimen/dp0"
         app:cornerType="0x0f"
         app:radius="@dimen/dp100" />
 
