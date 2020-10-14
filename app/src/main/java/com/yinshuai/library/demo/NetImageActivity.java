@@ -26,6 +26,6 @@ public class NetImageActivity extends AppCompatActivity {
 
         netImage.setUrl("https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1967835199,1119386598&fm=26&gp=0.jpg");
         roundNetImage.setUrl("https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1967835199,1119386598&fm=26&gp=0.jpg");
-}
+    }
 
 }
