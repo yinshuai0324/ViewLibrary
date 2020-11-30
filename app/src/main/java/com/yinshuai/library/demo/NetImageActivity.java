@@ -26,8 +26,8 @@ public class NetImageActivity extends AppCompatActivity {
         roundNetImage = findViewById(R.id.roundNetImage);
 
 
-        netImage.setUrl("https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1967835199,1119386598&fm=26&gp=0.jpg");
-        roundNetImage.setUrl("https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1967835199,1119386598&fm=26&gp=0.jpg");
+        netImage.setUrl("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1606713927042&di=b0b187f28183d4814ad77e17f5124016&imgtype=0&src=http%3A%2F%2Fa4.att.hudong.com%2F27%2F67%2F01300000921826141299672233506.jpg");
+        roundNetImage.setUrl("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1606713927042&di=b0b187f28183d4814ad77e17f5124016&imgtype=0&src=http%3A%2F%2Fa4.att.hudong.com%2F27%2F67%2F01300000921826141299672233506.jpg");
 
         roundNetImage.setOnImageLoadListener(new NetImageView.OnImageLoadListener() {
             @Override

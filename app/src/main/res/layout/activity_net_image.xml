@@ -10,8 +10,8 @@
 
     <com.yinshuai.library.view.img.NetImageView
         android:id="@+id/netImage"
-        android:layout_width="@dimen/dp200"
-        android:layout_height="@dimen/dp200"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:scaleType="centerCrop" />
 
     <com.yinshuai.library.view.img.RoundNetworkImageView

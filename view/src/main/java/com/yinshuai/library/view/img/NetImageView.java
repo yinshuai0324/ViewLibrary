@@ -52,23 +52,29 @@ public class NetImageView extends SquareImageView {
             setImageResource(defaultResId);
         } else {
             imageUrl = url;
-            Glide.with(this).load(imageUrl).error(errorResId).placeholder(defaultResId).transition(DrawableTransitionOptions.withCrossFade()).listener(new RequestListener<Drawable>() {
-                @Override
-                public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
-                    if (loadListener != null) {
-                        loadListener.loadFailed(imageUrl, e);
-                    }
-                    return false;
-                }
+            Glide.with(this)
+                    .load(imageUrl)
+                    .error(errorResId)
+                    .override(this.getWidth(), this.getHeight())
+                    .placeholder(defaultResId)
+                    .transition(DrawableTransitionOptions.withCrossFade())
+                    .listener(new RequestListener<Drawable>() {
+                        @Override
+                        public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
+                            if (loadListener != null) {
+                                loadListener.loadFailed(imageUrl, e);
+                            }
+                            return false;
+                        }
 
-                @Override
-                public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
-                    if (loadListener != null) {
-                        loadListener.loadSucceed(imageUrl, resource);
-                    }
-                    return false;
-                }
-            }).into(this);
+                        @Override
+                        public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
+                            if (loadListener != null) {
+                                loadListener.loadSucceed(imageUrl, resource);
+                            }
+                            return false;
+                        }
+                    }).into(this);
         }
     }
 
