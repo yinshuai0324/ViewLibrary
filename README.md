@@ -8,7 +8,7 @@
 [![](https://jitpack.io/v/yinshuai0324/ViewLibrary.svg)](https://jitpack.io/#yinshuai0324/ViewLibrary)
 
 ```
-implementation 'com.github.yinshuai0324:ViewLibrary:v{最新版本}'
+implementation 'com.github.yinshuai0324:ViewLibrary:{最新版本}'
 ```
 
 
