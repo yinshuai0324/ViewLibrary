@@ -7,6 +7,11 @@
 
 [![](https://jitpack.io/v/yinshuai0324/ViewLibrary.svg)](https://jitpack.io/#yinshuai0324/ViewLibrary)
 
+```
+implementation 'com.github.yinshuai0324:ViewLibrary:v{最新版本}'
+```
+
+
 #### 引入项目
 ```
 //项目根目录下的build.gradle
