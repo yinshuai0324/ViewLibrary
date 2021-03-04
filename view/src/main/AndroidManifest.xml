@@ -1,2 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.yinshuai.library.view" />
+    package="com.yinshuai.library.view">
+
+    <application>
+        <meta-data
+            android:name="com.yinshuai.library.utils.GlideHttpsModel"
+            android:value="AppGlideModule" />
+    </application>
+</manifest>
