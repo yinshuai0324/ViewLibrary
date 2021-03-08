@@ -10,6 +10,9 @@ import android.util.Log;
 import androidx.annotation.Nullable;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.RequestBuilder;
+import com.bumptech.glide.RequestManager;
+import com.bumptech.glide.TransitionOptions;
 import com.bumptech.glide.load.DataSource;
 import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
@@ -27,6 +30,7 @@ public class NetImageView extends SquareImageView {
     private int defaultResId = 0;
     private int errorResId = 0;
     private int loadingResId = 0;
+    private boolean isLoadAnim = false;
     private String imageUrl = "";
 
     private OnImageLoadListener loadListener;
@@ -42,6 +46,7 @@ public class NetImageView extends SquareImageView {
         errorResId = a.getResourceId(R.styleable.NetImageView_errorRes, R.drawable.ic_default);
         loadingResId = a.getResourceId(R.styleable.NetImageView_loadingRes, R.drawable.ic_default);
         defaultResId = a.getResourceId(R.styleable.NetImageView_defaultRes, R.drawable.ic_default);
+        isLoadAnim = a.getBoolean(R.styleable.NetImageView_isLoadAnim, false);
         setDefaultSrc(defaultResId);
         setUrl(a.getString(R.styleable.NetImageView_url));
     }
@@ -52,29 +57,11 @@ public class NetImageView extends SquareImageView {
             setImageResource(defaultResId);
         } else {
             imageUrl = url;
-            Glide.with(this)
-                    .load(imageUrl)
-                    .error(errorResId)
-                    .override(this.getWidth(), this.getHeight())
-                    .placeholder(defaultResId)
-                    .transition(DrawableTransitionOptions.withCrossFade())
-                    .listener(new RequestListener<Drawable>() {
-                        @Override
-                        public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
-                            if (loadListener != null) {
-                                loadListener.loadFailed(imageUrl, e);
-                            }
-                            return false;
-                        }
-
-                        @Override
-                        public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
-                            if (loadListener != null) {
-                                loadListener.loadSucceed(imageUrl, resource);
-                            }
-                            return false;
-                        }
-                    }).into(this);
+            if (isLoadAnim) {
+                loadImageAnim(url);
+            } else {
+                loadImgNotAnim(url);
+            }
         }
     }
 
@@ -103,4 +90,51 @@ public class NetImageView extends SquareImageView {
         void loadFailed(String url, Exception exception);
     }
 
+
+    private void loadImgNotAnim(String url) {
+        Glide.with(this).load(url).error(errorResId)
+                .override(this.getWidth(), this.getHeight())
+                .placeholder(defaultResId)
+                .listener(new RequestListener<Drawable>() {
+                    @Override
+                    public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
+                        if (loadListener != null) {
+                            loadListener.loadFailed(imageUrl, e);
+                        }
+                        return false;
+                    }
+
+                    @Override
+                    public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
+                        if (loadListener != null) {
+                            loadListener.loadSucceed(imageUrl, resource);
+                        }
+                        return false;
+                    }
+                }).into(this);
+    }
+
+    private void loadImageAnim(String url) {
+        Glide.with(this).load(url).error(errorResId)
+                .override(this.getWidth(), this.getHeight())
+                .placeholder(defaultResId)
+                .transition(DrawableTransitionOptions.withCrossFade())
+                .listener(new RequestListener<Drawable>() {
+                    @Override
+                    public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
+                        if (loadListener != null) {
+                            loadListener.loadFailed(imageUrl, e);
+                        }
+                        return false;
+                    }
+
+                    @Override
+                    public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
+                        if (loadListener != null) {
+                            loadListener.loadSucceed(imageUrl, resource);
+                        }
+                        return false;
+                    }
+                }).into(this);
+    }
 }

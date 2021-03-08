@@ -110,6 +110,7 @@
         <attr name="errorRes" format="reference" />
         <attr name="loadingRes" format="reference" />
         <attr name="defaultRes" format="reference" />
+        <attr name="isLoadAnim" format="boolean" />
         <attr name="url" format="string" />
     </declare-styleable>
 
