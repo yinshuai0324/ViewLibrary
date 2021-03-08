@@ -46,7 +46,7 @@ public class NetImageView extends SquareImageView {
         errorResId = a.getResourceId(R.styleable.NetImageView_errorRes, R.drawable.ic_default);
         loadingResId = a.getResourceId(R.styleable.NetImageView_loadingRes, R.drawable.ic_default);
         defaultResId = a.getResourceId(R.styleable.NetImageView_defaultRes, R.drawable.ic_default);
-        isLoadAnim = a.getBoolean(R.styleable.NetImageView_isLoadAnim, false);
+        isLoadAnim = a.getBoolean(R.styleable.NetImageView_isLoadAnim, true);
         setDefaultSrc(defaultResId);
         setUrl(a.getString(R.styleable.NetImageView_url));
     }
